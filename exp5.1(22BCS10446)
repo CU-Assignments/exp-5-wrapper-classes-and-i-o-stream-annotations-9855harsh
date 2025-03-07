@@ -1,0 +1,25 @@
+import java.util.*;
+
+public class SumUsingWrapper {
+    public static int sumList(List<Integer> numbers) {
+        int sum = 0;
+        for (int num : numbers) { // Unboxing
+            sum += num;
+        }
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(Integer.valueOf(10)); // Autoboxing
+        numbers.add(Integer.valueOf(20));
+        numbers.add(Integer.valueOf(30));
+
+        System.out.println("Sum of numbers: " + sumList(numbers));
+
+        // Parsing String to Integer using parseInt()
+        String str = "50";
+        int parsedNumber = Integer.parseInt(str);
+        System.out.println("Parsed number: " + parsedNumber);
+    }
+}
